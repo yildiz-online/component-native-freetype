@@ -53,17 +53,6 @@ This will compile the source code, then run the unit tests, and finally build a 
 
 In your maven project, add the dependency
 
-For windows 32 bits
-
-```xml
-<dependency>
-    <groupId>be.yildiz-games</groupId>
-    <artifactId>component-native-freetype</artifactId>
-    <version>LATEST</version>
-    <classifier>win32</classifier>
-</dependency>
-```
-
 For windows 64 bits
 
 ```xml
