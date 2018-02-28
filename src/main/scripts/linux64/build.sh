@@ -1,7 +1,12 @@
-cmake ../../c++ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="../../../../target/classes/linux64" -G "Unix Makefiles"
+cmake ../../c++ \
+-DCMAKE_BUILD_TYPE=Release \
+-DBUILD_SHARED_LIBS=TRUE \
+-DCMAKE_INSTALL_PREFIX="../../../../target/classes/linux64" \
+-G "Unix Makefiles"
 
 make install
 r1=$?
+make clean
 
 rm -R CMakeFiles
 rm CMakeCache.txt
@@ -11,6 +16,7 @@ rm install_manifest.txt
 rm -R include
 rm CPackConfig.cmake
 rm CPackSourceConfig.cmake
-rm libfreetype.a
+rm -R ../../../../target/classes/linux64/lib/cmake
+mv ../../../../target/classes/linux64/lib/libfreetype.so.2.8.0 ../../../../target/classes/linux64/lib/libfreetype.so
 
 return $r1
