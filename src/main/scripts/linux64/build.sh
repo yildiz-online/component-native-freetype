@@ -17,6 +17,5 @@ rm -R include
 rm CPackConfig.cmake
 rm CPackSourceConfig.cmake
 rm -R ../../../../target/classes/linux64/lib/cmake
-mv ../../../../target/classes/linux64/lib/libfreetype.so.2.8.0 ../../../../target/classes/linux64/lib/libfreetype.so
 
 return $r1
