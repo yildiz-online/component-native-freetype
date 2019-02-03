@@ -1,4 +1,4 @@
-cp -R ../../c++ .
+cp -R ../../c++ ./
 
 cmake . \
 -DCMAKE_BUILD_TYPE=Release \
