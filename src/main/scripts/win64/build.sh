@@ -5,9 +5,9 @@ cmake ../../c++ \
 -DCMAKE_TOOLCHAIN_FILE=mingw-toolchain.cmake
 
 ls -l
-cd include/freetype
+cd include/freetype/config
 ls -l
-cd ../..
+cd ../../..
 
 make install
 r1=$?
