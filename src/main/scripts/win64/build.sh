@@ -4,11 +4,7 @@ cmake ../../c++ \
 -DCMAKE_INSTALL_PREFIX="../../../../target/classes/win64" \
 -DCMAKE_TOOLCHAIN_FILE=mingw-toolchain.cmake
 
-cd ../../c++/include/freetype/config
-ls -l
-#cd include/freetype/config
-#ls -l
-#cd ../../..
+cp ../../c++/include/freetype/config/ftconfig.h include/freetype/config/ftconfig.h
 
 make install
 r1=$?
