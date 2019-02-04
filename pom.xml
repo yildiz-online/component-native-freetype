@@ -52,7 +52,72 @@
         <artifactId>exec-maven-plugin</artifactId>
         <groupId>org.codehaus.mojo</groupId>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack-linux64</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>be.yildiz-games</groupId>
+                  <artifactId>component-native-zlib</artifactId>
+                  <outputDirectory>src/main/scripts/linux64/zlib</outputDirectory>
+                  <includes>linux64/**/*.*</includes>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>be.yildiz-games</groupId>
+                  <artifactId>component-native-png</artifactId>
+                  <outputDirectory>src/main/scripts/linux64/png</outputDirectory>
+                  <includes>linux64/**/*.*</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+          <execution>
+            <id>unpack-win64</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>be.yildiz-games</groupId>
+                  <artifactId>component-native-zlib</artifactId>
+                  <outputDirectory>src/main/scripts/win64/zlib</outputDirectory>
+                  <includes>win64/**/*.*</includes>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>be.yildiz-games</groupId>
+                  <artifactId>component-native-png</artifactId>
+                  <outputDirectory>src/main/scripts/win64/png</outputDirectory>
+                  <includes>win64/**/*.*</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>be.yildiz-games</groupId>
+      <artifactId>component-native-zlib</artifactId>
+      <version>1.2.11.2</version>
+    </dependency>
+    <dependency>
+      <groupId>be.yildiz-games</groupId>
+      <artifactId>component-native-png</artifactId>
+      <version>1.6.36.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 
 </project>
