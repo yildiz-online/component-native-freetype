@@ -11,4 +11,4 @@ cp ../../c++/include/freetype/config/ftconfig.h include/freetype/config/ftconfig
 make install
 r1=$?
 
-return $r1
+exit ${r1}

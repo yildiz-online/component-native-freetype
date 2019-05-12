@@ -9,4 +9,4 @@ cmake ../../c++ \
 make install
 r1=$?
 
-return $r1
+exit ${r1}
